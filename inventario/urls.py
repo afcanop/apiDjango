@@ -6,6 +6,7 @@ urlpatterns = [
     # item
     path('item/lista', itemViews.item_lista),
     path('item/detalle', itemViews.item_detalle),
+    path('item/nuevo', itemViews.item_nuevo),
     # grupo
     path('grupo/nuevo', grupoViews.grupo_nuevo),
 

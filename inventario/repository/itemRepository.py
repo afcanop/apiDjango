@@ -10,3 +10,11 @@ class itemRepository:
     def detalle(self):
         data = item.objects.values('id', 'nombre', ).get(pk=2)
         return data
+
+    def nuevo(self):
+        arItem = item()
+        arItem.nombre = "nuevo item"
+        arItem.estado_importado = False
+        arItem.estado_disponible = False
+        arItem.save()
+        return arItem
