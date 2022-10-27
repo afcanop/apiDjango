@@ -15,7 +15,4 @@ class Migration(migrations.Migration):
             name='estado_disponible',
             field=models.BooleanField(default=False),
         ),
-        migrations.DeleteModel(
-            name='grupo',
-        ),
     ]
