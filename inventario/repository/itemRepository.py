@@ -1,4 +1,4 @@
-from inventario.models import item
+from inventario.models.item import item
 
 
 class itemRepository:

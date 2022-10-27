@@ -1,7 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from rest_framework.parsers import JSONParser
-from .models import item
+from .models.item import item
 from .serializers import itemSerializers
 from .repository.itemRepository import itemRepository
 
