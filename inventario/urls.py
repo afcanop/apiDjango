@@ -1,7 +1,12 @@
 from django.urls import path
-from inventario import views
+from inventario.views import item as itemViews
+from inventario.views import grupo as grupoViews
 
 urlpatterns = [
-    path('item/lista', views.item_lista),
-    path('item/detalle', views.item_detalle),
+    # item
+    path('item/lista', itemViews.item_lista),
+    path('item/detalle', itemViews.item_detalle),
+    # grupo
+    path('grupo/nuevo', grupoViews.grupo_nuevo),
+
 ]
