@@ -1,14 +1,22 @@
 from django.urls import path
-from inventario.views import item as itemViews
+from inventario.views import item
 from inventario.views import grupo as grupoViews
+
+
 
 urlpatterns = [
     # item
-    path('item/lista', itemViews.item_lista),
-    path('item/detalle', itemViews.item_detalle),
-    path('item/nuevo', itemViews.item_nuevo),
+    path('item/', item.ItemView.as_view({
+        'get': 'item_lista',
+    }), name='item_detalle'),
+    path('item/detalle', item.ItemView.as_view({
+        'get': 'item_detalle',
+    }), name='item_detalle'),
+    path('item/nuevo', item.ItemView.as_view({
+        'post': 'item_nuevo',
+    }), name='item_nuevo'),
     # grupo
-    path('grupo/lista', grupoViews.grupo_lista),
-    path('grupo/nuevo', grupoViews.grupo_nuevo),
+    # path('grupo/lista', grupoViews.grupo_lista),
+    # path('grupo/nuevo', grupoViews.grupo_nuevo),
 
 ]
